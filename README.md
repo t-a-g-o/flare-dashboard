@@ -27,7 +27,7 @@
 1. CD into the new webapp directory
 3. Clone the repository:
    ```shell
-   git clone https://github.com/t-a-g-o/flare-webapp
+   sudo git clone https://github.com/t-a-g-o/flare-webapp .
    ```
 4. Create a python virtual environment:
    ```shell
