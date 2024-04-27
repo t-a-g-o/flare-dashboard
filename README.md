@@ -17,11 +17,14 @@
 </div>
 
 # Getting Started
-1. Open the terminal.
-2. Update the package list and upgrade the installed packages:
+### Create webapp directory
+1. CD to the Flare main directory
+2. Create a new directory:
    ```shell
-   sudo apt update && sudo apt upgrade
+   sudo mkdir webapp
    ```
+### Clone and setup the web app
+1. CD into the new webapp directory
 3. Clone the repository:
    ```shell
    git clone https://github.com/t-a-g-o/flare-webapp
@@ -38,9 +41,6 @@
    ```shell
    pip install -r requirements.txt
    ```
-7. Start the Webapp:
-   ```shell
-   sudo python3 app.py
-   ```
+
 # License & Information 📃
 This project is published under the [MIT license](./LICENSE)

@@ -18,7 +18,7 @@ def load():
 @app.route('/dashboard')
 def dashboard():
     try:
-        with open('./flare/assetss/validkeys.txt', 'r') as f:
+        with open('../assets/validkeys.txt', 'r') as f:
             lines = len(f.readlines())
             licenses_stored = lines
     except:
@@ -26,10 +26,12 @@ def dashboard():
     try:
         registered_dir = 'registered'
         keys_activated = len([name for name in os.listdir(registered_dir) if os.path.isdir(os.path.join(registered_dir, name))])
+    except:
+        keys_activated = 'N/A'
+    try:
         recent_folders = sorted([name for name in os.listdir(registered_dir) if os.path.isdir(os.path.join(registered_dir, name))], key=lambda x: os.path.getctime(os.path.join(registered_dir, x)), reverse=True)[:10]
         recent_validates = [path.replace(f'{registered_dir}\\', '') for path in [os.path.join(registered_dir, folder) for folder in recent_folders]]
     except:
-        keys_activated = 'N/A'
         recent_validates = 'N/A'
     try:
         with open('log.txt') as f:
@@ -58,9 +60,11 @@ def dashboard():
         node_running = False
     try:
         python_status = subprocess.run(['ps', 'aux'], capture_output=True, text=True)
-        python_running = './flare/assets/watcher.py' in python_status.stdout.lower()
+        python_running = '../assets/watcher.py' in python_status.stdout.lower()
     except Exception as e:
         python_running = False
+    with open('load.html', 'r') as f:
+        base_template = f.read()
     with open('dashboard.html', 'r') as f:
         html_content = f.read()
     html_content = html_content.replace('{{ licenses_stored }}', str(licenses_stored))
@@ -90,13 +94,14 @@ def dashboard():
         html_content = html_content.replace('{{ python_service }}', './images/running.png')
     else:
         html_content = html_content.replace('{{ python_service }}', './images/notrunning.png')
+
     return html_content
 @app.route('/secrets')
 def secrets():
     with open('secrets.html', 'r') as f:
         html_content = f.read()
     try: 
-        with open('./flare/assets/identifiers.txt', 'r') as f:
+        with open('../assets/identifiers.txt', 'r') as f:
             lines = f.readlines()
             for i in range(len(lines)):
                 if "PRIVATE KEY IDENTIFIER" in lines[i]:
@@ -113,10 +118,10 @@ def secrets():
     return html_content
 @app.route('/config')
 def configure():
-    with open('config.html', 'r') as f:
+    with open('../config.json', 'r') as f:
         html_content = f.read()
     try: 
-        with open('./flare/config.json', 'r') as f:
+        with open('../config.json', 'r') as f:
             data = json.load(f)
             token = data['token']
             guildID = data['guildID']
@@ -144,8 +149,8 @@ def configure():
 @app.route('/save', methods=['POST'])
 def save_config():
     form_data = request.get_json()
-    with open('./flare/config.json', 'w') as config_file:
+    with open('../config.json', 'w') as config_file:
         json.dump(form_data, config_file, indent=2)
     return jsonify({'success': True, 'message': 'Config saved successfully'})
 if __name__ == '__main__':
-    app.run(debug=False,port='2')
+    app.run(debug=False,host='0.0.0.0',port='2')
