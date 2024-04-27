@@ -118,7 +118,7 @@ def secrets():
     return html_content
 @app.route('/config')
 def configure():
-    with open('../config.html', 'r') as f:
+    with open('config.html', 'r') as f:
         html_content = f.read()
     try: 
         with open('../config.json', 'r') as f:
