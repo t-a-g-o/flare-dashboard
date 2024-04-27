@@ -24,13 +24,13 @@ def dashboard():
     except:
         licenses_stored = 'N/A'
     try:
-        registered_dir = 'registered'
+        registered_dir = '../assets/registered/'
         keys_activated = len([name for name in os.listdir(registered_dir) if os.path.isdir(os.path.join(registered_dir, name))])
     except:
         keys_activated = 'N/A'
     try:
         recent_folders = sorted([name for name in os.listdir(registered_dir) if os.path.isdir(os.path.join(registered_dir, name))], key=lambda x: os.path.getctime(os.path.join(registered_dir, x)), reverse=True)[:10]
-        recent_validates = [path.replace(f'{registered_dir}\\', '') for path in [os.path.join(registered_dir, folder) for folder in recent_folders]]
+        recent_validates = [path.split(os.path.sep)[-1] for path in [os.path.join(registered_dir, folder) for folder in recent_folders]]
     except:
         recent_validates = 'N/A'
     try:
