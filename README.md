@@ -26,7 +26,7 @@
    sudo mkdir webdash
    ```
 ### Clone and setup the web files
-1. CD into the new webapp directory
+1. CD into the new webdash directory
 3. Clone the repository:
    ```shell
    sudo git clone https://github.com/t-a-g-o/flare-webapp .
