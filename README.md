@@ -28,7 +28,7 @@
    ```
 4. Create a python virtual environment:
    ```shell
-   python3 venv -m env
+   python3 -m venv env
    ```
 5. Activate the environment:
    ```shell
