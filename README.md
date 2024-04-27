@@ -39,7 +39,7 @@
    ```
 6. Install the required modules:
    ```shell
-   pip install -r requirements.txt
+   pip3 install -r requirements.txt
    ```
 ### Start the webapp
 1. If you haven't already, activate the environment:
