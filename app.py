@@ -34,7 +34,7 @@ def dashboard():
     except:
         recent_validates = 'N/A'
     try:
-        with open('log.txt') as f:
+        with open('flare.log') as f:
             logging = f.read()
     except:
         logging = 'No log file'
