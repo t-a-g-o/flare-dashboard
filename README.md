@@ -29,7 +29,7 @@
 1. CD into the new webdash directory
 3. Clone the repository:
    ```shell
-   sudo git clone https://github.com/t-a-g-o/flare-webapp .
+   sudo git clone https://github.com/t-a-g-o/flare-dashboard .
    ```
 4. Create a python virtual environment:
    ```shell
