@@ -11,7 +11,7 @@
     
 </div>
 
-> This Web App makes it eaiser to configure [Flare](https://github.com/tagoworks/flare), and look at different statistic and data about Flare.
+> This Web dashboard makes it eaiser to configure [Flare](https://github.com/tagoworks/flare), and look at different statistic and data about Flare.
 
 <br />
 <div align="center">
@@ -19,14 +19,14 @@
 </div>
 
 # Getting Started
-### Create webapp directory
+### Create webdash directory
 1. CD to the Flare main directory
 2. Create a new directory:
    ```shell
-   sudo mkdir webapp
+   sudo mkdir webdash
    ```
-### Clone and setup the web app
-1. CD into the new webapp directory
+### Clone and setup the web files
+1. CD into the new webdash directory
 3. Clone the repository:
    ```shell
    sudo git clone https://github.com/t-a-g-o/flare-webapp .
@@ -53,7 +53,7 @@
    sudo python3 app.py
    ```
 # More information
-**By default, the webapp will be hosted on port 2**
+**By default, the dashboard will be hosted on port 2**
 
 I will be working on this webapp more and more to make it way nicer and include a lot more functions, I just wanted to do this to see if it was possible with the knowledge I have.
 
