@@ -11,7 +11,7 @@
     
 </div>
 
-> This Web App makes it eaiser to configure Flare, and look at different statistic and data about Flare.
+> This Web App makes it eaiser to configure [Flare](https://github.com/tagoworks/flare), and look at different statistic and data about Flare.
 
 <br />
 <div align="center">
