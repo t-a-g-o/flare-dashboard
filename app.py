@@ -59,8 +59,9 @@ def dashboard():
     except Exception as e:
         node_running = False
     try:
-        python_status = subprocess.run(['ps', 'aux'], capture_output=True, text=True)
-        python_running = '../assets/watcher.py' in python_status.stdout.lower()
+        with open('../assets/watcher.lck') as f:
+            f.read()
+        python_running = True
     except Exception as e:
         python_running = False
     with open('load.html', 'r') as f:
