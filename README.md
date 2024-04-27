@@ -11,11 +11,11 @@
     
 </div>
 
-> This Web App makes it eaiser to configure Flare, and look at different statistic and data about Flare.
+> This Web App makes it eaiser to configure [Flare](https://github.com/tagoworks/flare), and look at different statistic and data about Flare.
 
 <br />
 <div align="center">
-<img width="538.8" height="448.8" src="https://cdn.discordapp.com/attachments/1092315227057561630/1233652499852955668/preview.png?ex=662ddfec&is=662c8e6c&hm=d848047866a0d44c87d49ef2accb84891ecca9ebffc009b5928842a7813dcec5&">
+<img width="538.8" height="448.8" src="https://cdn.discordapp.com/attachments/1092315227057561630/1233800533219737663/preview.png?ex=662e69ca&is=662d184a&hm=453095cfa109961d7632f23b5fdf64f737dbbb51734fc4a12843c4f6078612f0&">
 </div>
 
 # Getting Started
