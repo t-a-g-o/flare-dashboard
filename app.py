@@ -59,7 +59,7 @@ def dashboard():
     except Exception as e:
         node_running = False
     try:
-        with open('../assets/watcher.lck') as f:
+        with open('../assets/watcher.lck', 'rb') as f:
             f.read()
         python_running = True
     except Exception as e:
