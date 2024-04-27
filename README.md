@@ -31,7 +31,7 @@
    ```
 4. Create a python virtual environment:
    ```shell
-   python3 -m venv env
+   sudo python3 -m venv env
    ```
 5. Activate the environment:
    ```shell
@@ -41,6 +41,19 @@
    ```shell
    pip install -r requirements.txt
    ```
+### Start the webapp
+1. If you haven't already, activate the environment:
+   ```shell
+   source env/bin/activate
+   ```
+2. Run the app with sudo:
+   ```shell
+   sudo python3 app.py
+   ```
+# More information
+**By default, the webapp will be hosted on port 2**
 
-# License & Information 📃
+I will be working on this webapp more and more to make it way nicer and include a lot more functions, I just wanted to do this to see if it was possible with the knowledge I have.
+
+# License
 This project is published under the [MIT license](./LICENSE)
