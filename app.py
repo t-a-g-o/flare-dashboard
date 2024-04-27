@@ -40,7 +40,7 @@ def dashboard():
         logging = 'No log file'
     try:
         apache_status = subprocess.run(['systemctl', 'status', 'apache2'], capture_output=True, text=True)
-        apache_running = 'active' in apache_status.stdout.lower()
+        apache_running = '(running)' in apache_status.stdout.lower()
     except Exception as e:
         apache_running = False
     try:
@@ -48,24 +48,15 @@ def dashboard():
         cloudflare_running = 'cloudflare' in cloudflare_status.stdout.lower()
     except Exception as e:
         cloudflare_running = False
-    try:
-        flask_status = subprocess.run(['ps', 'aux'], capture_output=True, text=True)
-        flask_running = 'flask' in flask_status.stdout.lower()
-    except Exception as e:
-        flask_running = False
-    try:
-        node_status = subprocess.run(['ps', 'aux'], capture_output=True, text=True)
-        node_running = 'node' in node_status.stdout.lower()
-    except Exception as e:
-        node_running = False
-    try:
-        with open('../assets/watcher.lck', 'rb') as f:
-            f.read()
+    flask_running = False
+    node_running = False
+    python_running = False
+    if os.path.exists('../api.lck'): 
+        flask_running = True
+    if os.path.exists('../main.lck'):
+        node_running = True
+    if os.path.exists('../assets/watcher.lck'):
         python_running = True
-    except Exception as e:
-        python_running = False
-    with open('load.html', 'r') as f:
-        base_template = f.read()
     with open('dashboard.html', 'r') as f:
         html_content = f.read()
     html_content = html_content.replace('{{ licenses_stored }}', str(licenses_stored))
