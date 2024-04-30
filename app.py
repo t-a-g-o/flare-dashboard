@@ -4,9 +4,11 @@ import json
 import subprocess
 import socket
 import time
-import datetime
+from datetime import datetime
 
-
+#
+# Username and password to log into the Dashboard
+#
 username = 'admin'
 password = 'admin'
 
@@ -14,13 +16,8 @@ password = 'admin'
 
 
 
-
-
-
-
 app = Flask(__name__)
 app.secret_key = 'session'
-
 def check_authentication():
     if 'logged_in' in session and session['logged_in']:
         return True
