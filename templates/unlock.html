@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html style="font-size: 16px;" lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Flare Dashboard</title>
+    <link rel="stylesheet" href="./static/froala.css" media="screen">
+    <link rel="stylesheet" href="./static/unlock.css" media="screen">
+    <script class="u-script" type="text/javascript" src="./static/jquery.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('#submit-btn').click(function(event) {
+          event.preventDefault();
+          const username = $('#name-12ad').val();
+          const password = $('#text-ef77').val();
+          const credentials = {
+            username: username,
+            password: password
+          };
+          $.ajax({
+            type: 'POST',
+            url: '/login',
+            data: JSON.stringify(credentials),
+            contentType: 'application/json; charset=utf-8',
+            dataType: 'json',
+            success: function(response) {
+              console.log('Login successful!');
+              window.location.href = '/dashboard';
+            },
+            error: function(xhr, status, error) {
+              console.error('Login failed: ', error);
+              alert('Login failed. Please check your username and password.');
+            }
+          });
+        });
+      });
+    </script>
+</head>
+<body data-path-to-root="./" data-include-products="false" class="u-body u-xl-mode" data-lang="en">
+    <section class="u-clearfix u-custom-color-4 u-section-1" id="sec-4412">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <div class="u-form u-form-1">
+                <img class="u-hover-feature u-image u-image-contain u-image-default u-image-1" src="images/webdash.png" alt="" data-image-width="1920" data-image-height="408" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="0" data-href="https://github.com/t-a-g-o/flare-dashboard" data-target="_blank">
+                <form id="loginForm" action="/login" method="POST" class="u-clearfix u-form-spacing-27 u-form-vertical u-inner-form" source="input" name="login" style="padding: 47px;">
+                    <div class="u-form-group u-form-name">
+                        <label for="name-12ad" class="u-label u-label-1">Username</label>
+                        <input type="text" id="name-12ad" name="username" class="u-input u-input-rectangle u-radius u-input-1" required="required">
+                    </div>
+                    <div class="u-form-group u-form-group-2">
+                        <label for="text-ef77" class="u-label u-label-2">Password</label>
+                        <input type="password" id="text-ef77" name="password" class="u-input u-input-rectangle u-radius u-input-2" required="required">
+                    </div>
+                    <div class="u-align-right u-form-group u-form-submit">
+                        <button type="submit" id="submit-btn" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-grey-10 u-radius u-btn-1">Open Dashbord</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer class="u-align-center u-clearfix u-custom-color-4 u-footer" id="sec-1ebe">
+        <div class="u-clearfix u-sheet u-sheet-1">
+            <p class="u-align-center u-text u-text-default u-text-1">Flare Dashboard @ {{ localip }}<br>made with&nbsp; &nbsp; &nbsp; by tago</p>
+            <span class="u-file-icon u-icon u-text-white u-icon-1">
+                <img src="./images/heart.png" alt="">
+            </span>
+        </div>
+    </footer>
+</body>
+</html>
