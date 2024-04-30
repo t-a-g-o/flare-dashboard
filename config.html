@@ -117,11 +117,11 @@
               <form id="webdav-settings-form" class="u-clearfix u-form-spacing-27 u-form-vertical u-inner-form" style="padding: 50px;">
                 <div class="u-form-group u-form-name">
                     <label for="name-12ad" class="u-label u-label-6">Directory</label>
-                    <input type="text" placeholder="/var/www/accs" id="webdav-directory" class="u-input u-input-rectangle u-radius u-input-6">
+                    <input type="text" placeholder="{{ webdir_saved }}" id="webdav-directory" class="u-input u-input-rectangle u-radius u-input-6">
                 </div>
                 <div class="u-form-group u-form-group-8">
                     <label for="text-ef77" class="u-label u-label-7">API Auth Link</label>
-                    <input type="text" placeholder="api.yourdomain.com" id="webdav-auth-link" class="u-input u-input-rectangle u-radius u-input-7">
+                    <input type="text" placeholder="{{ weblink_saved }}" id="webdav-auth-link" class="u-input u-input-rectangle u-radius u-input-7">
                 </div>
                 <div class="u-align-right u-form-group u-form-submit">
                     <button id="submit-webdav-settings" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-grey-80 u-radius u-btn-2">Save</button>

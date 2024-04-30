@@ -196,7 +196,7 @@ def log():
         with open ('log.html', 'r')as f:
             html_content = f.read()
         try:
-            with open ('flare.log', 'r') as f:
+            with open ('../flare.log', 'r') as f:
                 logs = f.read()
                 logs = logs.replace('\n', '<br/>')
         except Exception as e:
