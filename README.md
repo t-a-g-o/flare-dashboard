@@ -15,7 +15,7 @@
 
 <br />
 <div align="center">
-<img width="538.8" height="448.8" src="      ">
+<img width="498.6" height="271.2" src="https://cdn.discordapp.com/attachments/1092315227057561630/1234875441526079579/showcase.png?ex=663252e0&is=66310160&hm=51da4ff2b518e6bf019d9bbe13ef2380dac81b242de95bf6b203ce2ab0cfb385&">
 </div>
 
 # Getting Started
