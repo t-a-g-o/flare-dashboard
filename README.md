@@ -7,7 +7,7 @@
    ![GitHub issues](https://img.shields.io/github/issues-raw/t-a-g-o/flare-webapp)
    ![GitHub](https://img.shields.io/github/license/t-a-g-o/flare-webapp)
 
-   **VERSION 0.1**
+   **VERSION 1.0**
     
 </div>
 
