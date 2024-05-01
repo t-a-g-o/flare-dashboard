@@ -40,7 +40,7 @@
             <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
           </div>
         </nav>
-        <img class="u-hover-feature u-image u-image-contain u-image-default u-preserve-proportions u-image-1" src="images/webdash.png" alt="" data-image-width="1920" data-image-height="408" data-href="https://github.com/t-a-g-o/flare-dashboard" data-target="_blank">
+        <img class="u-hover-feature u-image u-image-contain u-image-default u-preserve-proportions u-image-1" src="./images/webdash.png" alt="" data-image-width="1920" data-image-height="408" data-href="https://github.com/t-a-g-o/flare-dashboard" data-target="_blank">
         <div class="custom-expanded u-border-2 u-border-white u-line u-line-horizontal u-opacity u-opacity-20 u-line-1"></div>
       </div></header>
     <section class="u-clearfix u-custom-color-4 u-section-1" id="sec-1dad">
@@ -122,6 +122,29 @@
       opacity: 0;
     }
   } </style>
+        <script>
+          function updateServiceStatus() {
+            $.ajax({
+              url: '/services',
+              type: 'GET',
+              dataType: 'json',
+              success: function(data) {
+                $('.u-icon-1 img').attr('src', data.apache_service);
+                $('.u-icon-2 img').attr('src', data.flask_service);
+                $('.u-icon-3 img').attr('src', data.cloudflare_service);
+                $('.u-icon-4 img').attr('src', data.python_service);
+                $('.u-icon-5 img').attr('src', data.node_service);
+                $('.u-text-2').html(data.licenses_stored);
+                $('.u-text-4').html(data.keys_active);
+                $('.u-text-6').html(data.recent_validates);
+              },
+              error: function(xhr, status, error) {
+                console.error('Error fetching service status:', error);
+              }
+            });
+          }
+          setInterval(updateServiceStatus, 2000);
+        </script>
             </div>
             <div class="u-container-style u-gradient u-group u-radius u-shape-round u-group-3">
               <div class="u-container-layout u-container-layout-5"><span class="u-file-icon u-icon u-text-custom-color-12 u-icon-1"><img src="{{ apache_service }}" alt=""></span>

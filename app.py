@@ -51,6 +51,88 @@ def getlog():
     global terminal_log
     time.sleep(1)
     return jsonify({'terminalLog': terminal_log})
+
+@app.route('/services', methods=['GET'])
+def getservices():
+    time.sleep(1) 
+    registered_dir = '../assets/registered/'
+    try:
+        with open('../assets/validkeys.txt', 'r') as f:
+            lines = len(f.readlines())
+            licenses_stored = lines
+    except:
+        licenses_stored = 'N/A'
+    try:
+        registered_dir = '../assets/registered/'
+        keys_activated = len([name for name in os.listdir(registered_dir) if os.path.isdir(os.path.join(registered_dir, name))])
+    except:
+        keys_activated = 'N/A' 
+    try:
+        recent_folders = sorted([name for name in os.listdir(registered_dir) if os.path.isdir(os.path.join(registered_dir, name))], key=lambda x: os.path.getctime(os.path.join(registered_dir, x)), reverse=True)[:10]
+        recent_validates = [path.split(os.path.sep)[-1] for path in [os.path.join(registered_dir, folder) for folder in recent_folders]]
+    except:
+        recent_validates = 'N/A'
+    try:
+        with open('../flare.log') as f:
+            logging = f.read()
+            logging = logging.replace('\n', '<br/>')
+    except:
+        logging = 'No log file'
+    try:
+        apache_status = subprocess.run(['systemctl', 'status', 'apache2'], capture_output=True, text=True)
+        apache_running = '(running)' in apache_status.stdout.lower()
+    except Exception as e:
+        apache_running = False
+    try:
+        cloudflare_status = subprocess.run(['docker', 'ps'], capture_output=True, text=True)
+        cloudflare_running = 'cloudflare' in cloudflare_status.stdout.lower()
+    except Exception as e:
+        cloudflare_running = False
+    flask_running = False
+    node_running = False
+    python_running = False
+    if os.path.exists('../api.lck'): 
+        flask_running = True
+    if os.path.exists('../main.lck'):
+        node_running = True
+    if os.path.exists('../assets/watcher.lck'):
+        python_running = True
+    if apache_running == True:
+        apache_service_status = './images/running.png'
+    else:
+        apache_service_status = './images/notrunning.png'
+    if cloudflare_running == True:
+        cloudflare_service_status = './images/running.png'
+    else:
+        cloudflare_service_status = './images/notrunning.png'
+
+    if flask_running == True:
+        flask_service_status = './images/running.png'
+    else:
+        flask_service_status = './images/notrunning.png'
+
+    if node_running == True:
+        node_service_status = './images/running.png'
+    else:
+        node_service_status = './images/notrunning.png'
+
+    if python_running == True:
+        python_service_status = './images/running.png'
+    else:
+        python_service_status = './images/notrunning.png'
+
+        service_status = {
+        'apache_service': apache_service_status,
+        'flask_service': flask_service_status,
+        'cloudflare_service': cloudflare_service_status,
+        'python_service': python_service_status,
+        'node_service': node_service_status,
+        'licenses_stored': licenses_stored,
+        'keys_active': keys_activated,
+        'recent_validates': recent_validates
+    }
+    return jsonify(service_status)
+
 @app.route('/')
 def root():
     if check_authentication():
