@@ -54,7 +54,7 @@
    ```
 # More information
 **By default, the dashboard will be hosted on port 2 and the login will be admin:admin**
-
+**To lock the dashboard, add "/logout" at the end of the server address** *Ex: http :// 10.0.0.1/logout*
 I will be working on this webapp more and more to make it way nicer and include a lot more functions, I just wanted to do this to see if it was possible with the knowledge I have.
 
 # License
