@@ -1,0 +1,245 @@
+ .u-section-1 {
+  background-image: none;
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 1235px;
+}
+
+.u-section-1 .u-group-1 {
+  width: 1508px;
+  --radius: 50px;
+  height: auto;
+  background-image: none;
+  min-height: 1242px;
+  margin: 90px -368px 0 auto;
+}
+
+.u-section-1 .u-container-layout-1 {
+  padding: 0;
+}
+
+.u-section-1 .u-text-1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin: 46px auto 0 43px;
+}
+
+.u-section-1 .u-btn-1 {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  margin: -63px auto 0 515px;
+  padding: 0;
+}
+
+.u-section-1 .u-icon-1 {
+  font-size: 2em;
+}
+
+.u-section-1 .u-group-2 {
+  width: 979px;
+  --radius: 10px;
+  height: auto;
+  min-height: 247px;
+  transition-duration: 0.5s;
+  transform: rotate(0deg) scale(1) translateX(0px) translateY(0px);
+  margin: 81px auto 0 72px;
+}
+
+.u-section-1 .u-container-layout-2 {
+  padding: 0 12px;
+}
+
+.u-section-1 .u-text-2 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 0.92;
+  margin: 23px 646px 0 14px;
+}
+
+.u-section-1 .u-text-3 {
+  font-size: 1.5rem;
+  text-decoration: underline !important;
+  margin: 14px 14px 0 30px;
+}
+
+.u-section-1 .u-shape-1 {
+  width: 5798px;
+  height: 1242px;
+  margin: -1242px -5812px -97px auto;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-group-1 {
+    width: 1130px;
+    margin-right: -190px;
+    height: auto;
+  }
+
+  .u-section-1 .u-btn-1 {
+    font-size: 0.875rem;
+    margin-top: -59px;
+    margin-left: 513px;
+  }
+
+  .u-section-1 .u-icon-1 {
+    width: 28px;
+    height: 38px;
+  }
+
+  .u-section-1 .u-group-2 {
+    width: 940px;
+    margin-top: 58px;
+    margin-left: 46px;
+    height: auto;
+  }
+
+  .u-section-1 .u-text-2 {
+    width: auto;
+    margin-right: 535px;
+    margin-left: 5px;
+  }
+
+  .u-section-1 .u-text-3 {
+    width: auto;
+    margin-right: 39px;
+    margin-left: 23px;
+  }
+}
+
+@media (max-width: 991px) {
+  .u-section-1 .u-group-1 {
+    width: 1040px;
+    margin-right: -320px;
+  }
+
+  .u-section-1 .u-btn-1 {
+    margin-top: -57px;
+    margin-right: 487px;
+    margin-left: auto;
+  }
+
+  .u-section-1 .u-group-2 {
+    width: 720px;
+    margin-top: 14px;
+    margin-left: 43px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-right: 317px;
+    margin-left: 14px;
+  }
+
+  .u-section-1 .u-text-3 {
+    margin-right: 43px;
+    margin-left: 14px;
+  }
+}
+
+@media (max-width: 767px) {
+  .u-section-1 .u-group-1 {
+    width: 974px;
+    margin-right: -434px;
+  }
+
+  .u-section-1 .u-container-layout-1 {
+    padding-bottom: 30px;
+  }
+
+  .u-section-1 .u-text-1 {
+    font-size: 1.5rem;
+  }
+
+  .u-section-1 .u-btn-1 {
+    margin-top: -36px;
+    margin-right: auto;
+    margin-left: 281px;
+  }
+
+  .u-section-1 .u-icon-1 {
+    font-size: 1.6429em;
+  }
+
+  .u-section-1 .u-group-2 {
+    width: 540px;
+    margin-top: 20px;
+  }
+
+  .u-section-1 .u-container-layout-2 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .u-section-1 .u-text-2 {
+    font-size: 1rem;
+    line-height: 1.31;
+    margin-top: 19px;
+    margin-right: 239px;
+    margin-left: 19px;
+  }
+
+  .u-section-1 .u-text-3 {
+    margin-top: 9px;
+    margin-right: 46px;
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 575px) {
+  .u-section-1 .u-group-1 {
+    width: 632px;
+    margin-right: -292px;
+  }
+
+  .u-section-1 .u-container-layout-1 {
+    padding-bottom: 5px;
+  }
+
+  .u-section-1 .u-text-1 {
+    width: auto;
+    margin-top: 51px;
+  }
+
+  .u-section-1 .u-btn-1 {
+    margin-left: 282px;
+  }
+
+  .u-section-1 .u-group-2 {
+    width: 358px;
+    min-height: 228px;
+    margin-top: 17px;
+    margin-left: 28px;
+  }
+
+  .u-section-1 .u-text-2 {
+    margin-top: 14px;
+    margin-right: 32px;
+    margin-left: 13px;
+  }
+
+  .u-section-1 .u-text-3 {
+    margin-top: 10px;
+    margin-left: 13px;
+    margin-right: 13px;
+  }
+
+  .u-section-1 .u-shape-1 {
+    margin-right: -5828px;
+  }
+}
+
+.u-section-1 .u-group-2,
+.u-section-1 .u-group-2:before,
+.u-section-1 .u-group-2 > .u-container-layout:before {
+  transition-property: fill, color, background-color, stroke-width, border-style, border-width, border-top-width, border-left-width, border-right-width, border-bottom-width, custom-border, borders, box-shadow, text-shadow, opacity, border-radius, stroke, border-color, font-size, font-style, font-weight, text-decoration, letter-spacing, transform, background-image, image-zoom, background-size, background-position;
+}
+
+.u-section-1 .u-group-2.u-group-2.u-group-2:hover {
+  transform: translateX(0px) translateY(-3px) !important;
+}
+
+.u-section-1 .u-group-2.u-group-2.u-group-2.hover {
+  transform: translateX(0px) translateY(-3px) !important;
+}

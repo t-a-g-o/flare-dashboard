@@ -1,243 +1,166 @@
 <!DOCTYPE html>
-    <html style="font-size: 16px;" lang="en"><head>
+<html style="font-size: 16px;" lang="en">
+  <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
     <title>Flare Dashboard | Dashboard</title>
     <link rel="stylesheet" href="./static/froala.css" media="screen">
     <link rel="stylesheet" href="./static/dash.css" media="screen">
-    <link rel="icon" href="./images/icon.png" type="image/png">
-    <script class="u-script" type="text/javascript" src="./static/jquery.js"></script>
-    <script class="u-script" type="text/javascript" src="./static/bundle.js"></script>
+    <script class="u-script" type="text/javascript" src="./static/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="./static/bundle.js" defer=""></script>
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
-    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Ubuntu:300,300i,400,400i,500,500i,700,700i">
-    <meta name="theme-color" content="#478ac9"></head>
-    <body data-home-page="Home.html" data-path-to-root="./" data-include-products="false" class="u-body u-overlap u-overlap-contrast u-overlap-transparent u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-2967"><div class="u-clearfix u-sheet u-sheet-1">
-        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900|Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
+  </head>
+    <body data-path-to-root="./" data-include-products="false" class="u-body u-overlap u-overlap-transparent u-xl-mode" data-lang="en">
+      <header class="u-clearfix u-header u-header" id="sec-bbaf">
+        <div class="u-clearfix u-sheet u-sheet-1">
+        <a href="https://github.com/t-a-g-o/flare-dashboard/" class="u-hover-feature u-image u-logo u-image-1" data-image-width="1920" data-image-height="408" title="[]">
+          <img src="./images/webdash.png" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-hamburger u-offcanvas u-menu-1" data-responsive-from="XL" data-submenu-level="on-click">
           <div class="menu-collapse">
-            <a class="u-button-style u-custom-active-color u-custom-border-radius u-custom-color u-custom-effect-duration u-custom-left-right-menu-spacing u-custom-text-active-color u-custom-text-color u-custom-text-shadow u-nav-link u-text-white" href="#">
-              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-3cdc"></use></svg>
-              <svg class="u-svg-content" version="1.1" id="svg-3cdc" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
-              </g></svg>
+            <a class="u-button-style u-file-icon u-nav-link u-text-white u-file-icon-1" href="#">
+              <img src="./images/menu.png" alt="">
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-active-custom-color-10 u-button-style u-nav-link u-radius u-text-active-black u-text-white" href=" " style="--radius:9px; padding: 10px 29px; transition-duration: 1.5s;">Dashboard</a>
-            </li><li class="u-nav-item"><a class="u-active-custom-color-10 u-button-style u-nav-link u-radius u-text-active-black u-text-white" href="config" style="--radius:9px; padding: 10px 29px; transition-duration: 1.5s;">Configure</a>
-            </li><li class="u-nav-item"><a class="u-active-custom-color-10 u-button-style u-nav-link u-radius u-text-active-black u-text-white" href="secrets" style="--radius:9px; padding: 10px 29px; transition-duration: 1.5s;">Your Secret Keys</a>
-            </li><li class="u-nav-item"><a class="u-active-custom-color-10 u-button-style u-nav-link u-radius u-text-active-black u-text-white" href="log" style="--radius:9px; padding: 10px 29px; transition-duration: 1.5s;">Service Logs</a>
+            <ul class="u-nav u-unstyled"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/dashboard" style="padding-right: 0px;">Dashboard</a>
+            </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/log" style="padding-right: 0px;">Flare Logging</a>
+            </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/secrets" style="padding-right: 0px;">Secret Keys</a>
+            </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/roamingkeys" style="padding-right: 0px;">Roaming License Keys</a>
             </li></ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">
-            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+            <div class="custom-expanded u-container-style u-grey-15 u-inner-container-layout u-opacity u-opacity-70 u-sidenav u-sidenav-1" data-offcanvas-width="280">
               <div class="u-inner-container-layout u-sidenav-overflow">
-                <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href=" ">Dashboard</a>
-                </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="config">Configure</a>
-                </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="secrets">Your Secret Keys</a>
-                </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="log">Service Logs</a>
+                <div class="u-menu-close u-menu-close-1"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-spacing-0 u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/dashboard" style="padding-top: 24px; padding-bottom: 24px;">Dashboard</a>
+                </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/log" style="padding-top: 24px; padding-bottom: 24px;">Flare Logging</a>
+                </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/secrets" style="padding-top: 24px; padding-bottom: 24px;">Secret Keys</a>
+                </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/roamingkeys" style="padding-top: 24px; padding-bottom: 24px;">Roaming License Keys</a>
                 </li></ul>
               </div>
             </div>
-            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+            <div class="u-menu-overlay"></div>
           </div>
-        </nav>
-        <img class="u-hover-feature u-image u-image-contain u-image-default u-preserve-proportions u-image-1" src="./images/webdash.png" alt="" data-image-width="1920" data-image-height="408" data-href="https://github.com/t-a-g-o/flare-dashboard" data-target="_blank">
-        <div class="custom-expanded u-border-2 u-border-white u-line u-line-horizontal u-opacity u-opacity-20 u-line-1"></div>
-      </div></header>
-    <section class="u-clearfix u-custom-color-4 u-section-1" id="sec-1dad">
+        </nav><span class="u-file-icon u-hidden-xs u-icon u-text-white u-icon-1" data-href="https://github.com/tagoworks/flare/wiki/Flare-Dashboard" data-target="_blank" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="500"><img src="./images/wiki.png" alt=""></span><span class="u-file-icon u-hidden-xs u-icon u-text-white u-icon-2" data-href="https://github.com/tagoworks/flare/issues" data-target="_blank" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-delay="1000"><img src="./images/issues.png" alt=""></span><span class="u-file-icon u-hover-feature u-icon u-text-white u-icon-3" data-href="/logout" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="0"><img src="./images/exit.png" alt=""></span>
+      </div>
+    </header>
+    <section class="u-clearfix u-custom-color-2 u-section-1" id="sec-8654">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="data-layout-selected u-clearfix u-expanded-width-sm u-expanded-width-xs u-gutter-26 u-layout-wrap u-layout-wrap-1">
-          <div class="u-layout">
-            <div class="u-layout-row">
-              <div class="u-container-style u-gradient u-hover-feature u-layout-cell u-radius u-shape-round u-size-30 u-layout-cell-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="0">
-                <div class="u-container-layout u-valign-bottom-lg u-valign-bottom-md u-valign-bottom-xl u-container-layout-1">
-                  <p class="u-align-left u-custom-font u-font-roboto u-text u-text-1">Licenses left</p>
-                  <p class="u-align-left u-custom-font u-font-roboto u-text u-text-default u-text-2">{{ licenses_stored }}</p>
-                </div>
-              </div>
-              <div class="u-container-style u-gradient u-hover-feature u-layout-cell u-radius u-shape-round u-size-30 u-layout-cell-2" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="0">
-                <div class="u-container-layout u-valign-top-lg u-valign-top-md u-valign-top-xl u-container-layout-2">
-                  <p class="u-custom-font u-font-roboto u-text u-text-3">Accounts active</p>
-                  <p class="u-custom-font u-font-roboto u-text u-text-default u-text-4">{{ keys_activated }}</p>
-                </div>
+        <div class="custom-expanded u-custom-color-1 u-shape u-shape-rectangle u-shape-1"></div>
+        <div class="custom-expanded u-container-style u-custom-color-1 u-group u-radius u-shape-round u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <p class="u-custom-font u-font-titillium-web u-hover-feature u-text u-text-default u-text-1">{{ greeting }}, {{ name }}</p>
+            <div class="u-container-style u-custom-color-4 u-group u-hover-feature u-radius u-shape-round u-group-2">
+              <div class="u-container-layout u-container-layout-2"><span class="u-custom-color-6 u-file-icon u-icon u-icon-rounded u-opacity u-opacity-85 u-radius u-text-palette-3-base u-icon-1"><img src="./images/dashboard/key.png" alt=""></span>
+                <p class="u-align-left u-custom-font u-font-lato u-text u-text-2">License Keys Remaining</p>
+                <p class="u-custom-font u-font-lato u-text u-text-palette-3-light-2 u-text-3">{{ licenses_stored }}</p>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="u-container-style u-expanded-width-sm u-expanded-width-xs u-gradient u-group u-hover-feature u-radius u-shape-round u-group-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="0">
-          <div class="u-container-layout u-container-layout-3">
-            <p class="u-custom-font u-font-roboto u-text u-text-5">Recent Accounts</p>
-            <p class="u-align-left u-custom-font u-font-roboto u-text u-text-default u-text-6">{{ recent_validates }}</p>
-          </div>
-        </div>
-        <div class="u-container-style u-expanded-width-sm u-expanded-width-xs u-gradient u-group u-hover-feature u-radius u-shape-round u-group-2" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="0">
-          <div class="u-container-layout u-container-layout-4">
-            <p class="u-custom-font u-font-roboto u-text u-text-7">Running Services </p>
-            <div class="custom-expanded u-clearfix u-custom-html u-custom-html-1">
-              <svg class="container" x="0px" y="0px" viewBox="0 0 50 31.25" height="31.25" width="50" preserveAspectRatio="xMidYMid meet"><path class="track" stroke-width="4" fill="none" pathLength="100" d="M0.625 21.5 h10.25 l3.75 -5.875 l7.375 15 l9.75 -30 l7.375 20.875 v0 h10.25"></path><path class="car" stroke-width="4" fill="none" pathLength="100" d="M0.625 21.5 h10.25 l3.75 -5.875 l7.375 15 l9.75 -30 l7.375 20.875 v0 h10.25"></path></svg>
-              <style> .container {
-    --uib-size: 25px;
-    --uib-color: black;
-    --uib-speed: 1.25s;
-    --uib-bg-opacity: .1;
-    height: 31.25px;
-    width: 50px;
-    transform-origin: center;
-    overflow: visible;
-  }
-  .car {
-    stroke: var(--uib-color);
-    stroke-dasharray: 100;
-    stroke-dashoffset: 0;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    animation:
-      travel var(--uib-speed) ease-in-out infinite,
-      fade var(--uib-speed) ease-out infinite;
-    will-change: stroke-dasharray, stroke-dashoffset;
-    transition: stroke 0.5s ease;
-  }
-  .track {
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    stroke: var(--uib-color);
-    opacity: var(--uib-bg-opacity);
-  }
-  @keyframes travel {
-    0% {
-      stroke-dashoffset: 100;
-    }
-    75% {
-      stroke-dashoffset: 0;
-    }
-  }
-  @keyframes fade {
-    0% {
-      opacity: 0;
-    }
-    20%,
-    55% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-    }
-  } </style>
-        <script>
-          function updateServiceStatus() {
-            $.ajax({
-              url: '/services',
-              type: 'GET',
-              dataType: 'json',
-              success: function(data) {
-                $('.u-icon-1 img').attr('src', data.apache_service);
-                $('.u-icon-2 img').attr('src', data.flask_service);
-                $('.u-icon-3 img').attr('src', data.cloudflare_service);
-                $('.u-icon-4 img').attr('src', data.python_service);
-                $('.u-icon-5 img').attr('src', data.node_service);
-                $('.u-text-2').html(data.licenses_stored);
-                $('.u-text-4').html(data.keys_active);
-                $('.u-text-6').html(data.recent_validates);
-              },
-              error: function(xhr, status, error) {
-                console.error('Error fetching service status:', error);
-              }
-            });
-          }
-          setInterval(updateServiceStatus, 2000);
-        </script>
-            </div>
-            <div class="u-container-style u-gradient u-group u-radius u-shape-round u-group-3">
-              <div class="u-container-layout u-container-layout-5"><span class="u-file-icon u-icon u-text-custom-color-12 u-icon-1"><img src="{{ apache_service }}" alt=""></span>
-                <h4 class="u-text u-text-8">Apache</h4>
+            <div class="u-container-style u-custom-color-4 u-group u-hover-feature u-radius u-shape-round u-group-3" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+              <div class="u-container-layout u-container-layout-3"><span class="u-file-icon u-icon u-icon-rounded u-palette-1-light-2 u-radius u-text-palette-1-base u-icon-2"><img src="./images/dashboard/accs.png" alt=""></span>
+                <p class="u-custom-font u-font-lato u-text u-text-4">Total Validated Keys</p>
+                <p class="u-custom-font u-font-lato u-text u-text-palette-3-light-2 u-text-5">{{ keys_activated }}</p>
               </div>
             </div>
-            <div class="u-container-style u-gradient u-group u-radius u-shape-round u-group-4">
-              <div class="u-container-layout u-container-layout-6"><span class="u-file-icon u-icon u-icon-2"><img src="{{ flask_service }}" alt=""></span>
+            <div class="u-container-style u-custom-color-4 u-group u-hover-feature u-radius u-shape-round u-group-4" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+              <div class="u-container-layout u-container-layout-4">
+                <p class="u-custom-font u-font-lato u-text u-text-6">Recent Accounts</p>
+                <p class="u-custom-font u-font-lato u-text u-text-palette-3-light-2 u-text-7">{{ recent_validates }}</p>
               </div>
             </div>
-            <h4 class="u-text u-text-9">Flask API</h4>
-            <div class="u-container-style u-gradient u-group u-radius u-shape-round u-group-5">
-              <div class="u-container-layout u-container-layout-7">
-                <h4 class="u-text u-text-10">Cloudflare Docker</h4>
+            <div class="u-container-style u-custom-color-4 u-group u-hover-feature u-radius u-shape-round u-group-5" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+              <div class="u-container-layout u-valign-top-sm u-valign-top-xs u-container-layout-5">
+                <p class="u-custom-font u-font-lato u-text u-text-8">USEFUL PAGES&nbsp;&nbsp;<span class="u-file-icon u-icon u-text-white u-icon-3"><img src="images/dashboard/tools.png" alt=""></span>
+                </p>
+                <a href="/roamingkeys" class="u-border-none u-btn u-btn-round u-button-style u-custom-color-6 u-radius u-btn-1">All Active Keys</a>
+                <a href="/log" class="u-border-none u-btn u-btn-round u-button-style u-custom-color-6 u-radius u-btn-2">View Service Log</a>
+                <a href="/secrets" class="u-border-none u-btn u-btn-round u-button-style u-custom-color-6 u-radius u-btn-3">View Secret Identifiers</a>
+                <a href="/config" class="u-border-none u-btn u-btn-round u-button-style u-custom-color-6 u-radius u-btn-4">//Configure</a>
               </div>
-            </div><span class="u-file-icon u-icon u-icon-3"><img src="{{ cloudflare_service }}" alt=""></span>
-            <div class="u-container-style u-gradient u-group u-radius u-shape-round u-group-6">
-              <div class="u-container-layout u-container-layout-8">
-                <h4 class="u-text u-text-11">Watcher</h4>
-              </div>
-            </div><span class="u-file-icon u-icon u-icon-4"><img src="{{ python_service }}" alt=""></span>
-            <div class="u-container-style u-gradient u-group u-radius u-shape-round u-group-7">
-              <div class="u-container-layout u-container-layout-9">
-                <h4 class="u-text u-text-12">Discord Bot</h4>
-              </div>
-            </div><span class="u-file-icon u-icon u-icon-5"><img src="{{ node_service }}" alt=""></span>
-          </div>
-        </div>
-        <div class="u-container-style u-expanded-width-sm u-expanded-width-xs u-gradient u-group u-hover-feature u-radius u-shape-round u-group-8" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="0">
-          <div class="u-container-layout u-container-layout-10">
-            <p class="u-custom-font u-font-roboto u-text u-text-13">Command Line</p>
-            <p class="u-align-left u-custom-font u-font-roboto u-text u-text-14">{{ terminallog }}<br>
-            </p>
-            <div class="custom-expanded u-form u-form-1">
-              <form id="commandForm" class="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form" style="padding: 10px;">
-                <div class="u-form-group">
-                    <label for="command" class="u-custom-font u-font-ubuntu u-label u-text-white u-label-1">Enter a command to send in your terminal as root</label>
-                    <input type="text" placeholder="Command" id="command" name="command" class="u-grey-90 u-input u-input-rectangle u-radius u-input-1" required>
+            </div>
+            <div class="u-container-style u-custom-color-4 u-group u-hover-feature u-radius u-shape-round u-group-6" data-animation-name="" data-animation-duration="0" data-animation-delay="0" data-animation-direction="">
+              <div class="u-container-layout u-container-layout-6">
+                <p class="u-custom-font u-font-lato u-text u-text-9">Command Line</p>
+                <div class="u-align-left u-border-2 u-border-grey-75 u-container-style u-custom-color-4 u-group u-radius u-shape-round u-group-7">
+                  <div class="u-container-layout u-valign-middle-lg u-valign-middle-xl u-container-layout-7">
+                    <h3 class="u-text u-text-10">Enter a command and see its output here</h3>
+                  </div>
                 </div>
-                <div class="u-align-left u-form-group u-form-submit">
-                    <button id="submitCommand" type="button" class="u-border-2 u-border-grey-75 u-btn u-btn-round u-btn-submit u-button-style u-custom-color-4 u-radius u-btn-1">Send</button>
-                </div>
-            </form>
-            <script>
-              $(document).ready(function() {
-                $('#submitCommand').click(function(event) {
-                  event.preventDefault();
-                  const command = $('#command').val();
-                  const requestData = {
-                    command: command
-                  }
-                  $.ajax({
-                    type: 'POST',
-                    url: '/send',
-                    data: JSON.stringify(requestData),
-                    contentType: 'application/json; charset=utf-8',
-                    dataType: 'json',
-                    success: function(response) {
-                      console.log('Command sent successfully!');
-                      startPollingTerminalLog();
-                    },
-                    error: function(xhr, status, error) {
-                      console.error('Error sending command: ', error);
-                      alert('Error sending command. Please try again.');
-                    }
-                  });
-                });
-                function startPollingTerminalLog() {
-                  setInterval(function() {
-                    $.ajax({
-                      type: 'GET',
-                      url: '/update',
-                      dataType: 'json',
-                      success: function(response) {
-                        $('.u-text-14').html(response.terminalLog);
-                      },
-                      error: function(xhr, status, error) {
-                        console.error('Error fetching terminal log: ', error);
-                      }
+                <div class="custom-expanded u-form u-form-1">
+                  <form class="u-clearfix u-form-horizontal u-form-spacing-10 u-inner-form" source="email" name="command" style="padding: 10px;">
+                    <div class="u-form-email u-form-group">
+                      <input type="text" placeholder="Enter command to send to server" id="command-string" name="command" class="u-input u-input-rectangle u-radius u-input-1" required="">
+                    </div>
+                    <div class="u-align-left u-form-group u-form-submit">
+                      <a href="#" id="submit" class="u-border-none u-btn u-btn-round u-btn-submit u-button-style u-grey-5 u-radius u-btn-5">Send</a>
+                      <input type="submit" id="submit" class="u-form-control-hidden">
+                    </div>
+                  </form>
+                  <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const form = document.querySelector('.u-inner-form');
+                        form.addEventListener('submit', function(event) {
+                            event.preventDefault();
+                            const commandInput = document.getElementById('command-string');
+                            const command = commandInput.value;
+                            const payload = {
+                                command: command
+                            };
+                            fetch('/send', {
+                                method: 'POST',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify(payload)
+                            })
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error('Network response was not ok');
+                                }
+                                return response.json();
+                            })
+                            .then(data => {
+                                console.log('Server response:', data);
+                                setTimeout(() => {
+                                    fetch('/update?type=terminal')
+                                        .then(response => {
+                                            if (!response.ok) {
+                                                throw new Error('Network response was not ok');
+                                            }
+                                            return response.json();
+                                        })
+                                        .then(updatedData => {
+                                            const terminalLog = updatedData.terminalLog;
+                                            const textElement = document.querySelector('.u-text-10');
+                                            textElement.innerHTML = updatedData.terminalLog;
+                                        })
+                                        .catch(error => {
+                                            console.error('Error fetching updated content:', error);
+                                        });
+                                }, 1000);
+                            })
+                            .catch(error => {
+                                console.error('Error sending command:', error);
+                            });
+                        });
                     });
-                  }, 2000);
-                }
-              });
-            </script>    
+                  </script>
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div> 
+      </div>
     </section>
-    <footer class="u-align-center u-clearfix u-custom-color-4 u-footer u-footer" id="sec-1ebe"><div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-align-center u-text u-text-default u-text-1">Flare Dashboard @ {{ localip }}<br>made with&nbsp; &nbsp; &nbsp; by tago
-        </p><span class="u-file-icon u-icon u-text-white u-icon-99"><img src="./images/heart.png" alt=""></span>
+    <footer class="u-align-center u-clearfix u-custom-color-3 u-footer u-footer" id="sec-893c">
+      <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">Flare Dashboard @ {{ localip }}<br>made with&nbsp;<span class="u-file-icon u-icon u-text-white u-icon-1"><img src="./images/heart.png" alt=""></span>&nbsp;by tago
+        </p>
       </div>
     </footer>
-</body></html>
+  </body>
+</html>

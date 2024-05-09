@@ -1,61 +1,171 @@
 <!DOCTYPE html>
-    <html style="font-size: 16px;" lang="en"><head>
+<html style="font-size: 16px;" lang="en">
+  <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8">
-    <title>Flare Dashboard | Logging</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <title>Flare Dashboard | Service Log</title>
     <link rel="stylesheet" href="./static/froala.css" media="screen">
-    <link rel="stylesheet" href="./static/log.css" media="screen">
-    <link rel="icon" href="./images/icon.png" type="image/png">
-    <script class="u-script" type="text/javascript" src="./static/jquery.js"></script>
-    <script class="u-script" type="text/javascript" src="./static/bundle.js"></script>
+    <link rel="stylesheet" href="./static/logs.css" media="screen">
+    <script class="u-script" type="text/javascript" src="./static/jquery.js" defer=""></script>
+    <script class="u-script" type="text/javascript" src="./static/bundle.js" defer=""></script>
     <link id="u-theme-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i">
-    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Ubuntu:300,300i,400,400i,500,500i,700,700i">
-    <meta name="theme-color" content="#478ac9"></head>
-    <body data-path-to-root="./" data-include-products="false" class="u-body u-overlap u-overlap-transparent u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-2967"><div class="u-clearfix u-sheet u-sheet-1">
-        <nav class="u-menu u-menu-one-level u-offcanvas u-menu-1">
+    <link id="u-page-google-font" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900|Lato:100,100i,300,300i,400,400i,700,700i,900,900i">
+  </head>
+  <body data-path-to-root="./" data-include-products="false" class="u-body u-overlap u-overlap-transparent u-xl-mode" data-lang="en"><header class="u-clearfix u-header u-header" id="sec-bbaf"><div class="u-clearfix u-sheet u-sheet-1">
+        <a href="https://github.com/t-a-g-o/flare-dashboard/" class="u-hover-feature u-image u-logo u-image-1" data-image-width="1920" data-image-height="408" title="[]">
+          <img src="./images/webdash.png" class="u-logo-image u-logo-image-1">
+        </a>
+        <nav class="u-menu u-menu-hamburger u-offcanvas u-menu-1" data-responsive-from="XL" data-submenu-level="on-click">
           <div class="menu-collapse">
-            <a class="u-button-style u-custom-active-color u-custom-border-radius u-custom-color u-custom-effect-duration u-custom-left-right-menu-spacing u-custom-text-active-color u-custom-text-color u-custom-text-shadow u-nav-link u-text-white" href="#">
-              <svg class="u-svg-link" viewBox="0 0 24 24"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-3cdc"></use></svg>
-              <svg class="u-svg-content" version="1.1" id="svg-3cdc" viewBox="0 0 16 16" x="0px" y="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g><rect y="1" width="16" height="2"></rect><rect y="7" width="16" height="2"></rect><rect y="13" width="16" height="2"></rect>
-              </g></svg>
+            <a class="u-button-style u-file-icon u-nav-link u-text-white u-file-icon-1" href="#">
+              <img src="./images/menu.png" alt="">
             </a>
           </div>
           <div class="u-custom-menu u-nav-container">
-            <ul class="u-nav u-unstyled u-nav-1"><li class="u-nav-item"><a class="u-active-custom-color-10 u-button-style u-nav-link u-radius u-text-active-black u-text-white" href="dashboard" style="--radius:9px; padding: 10px 29px; transition-duration: 1.5s;">Dashboard</a>
-              </li><li class="u-nav-item"><a class="u-active-custom-color-10 u-button-style u-nav-link u-radius u-text-active-black u-text-white" href="config" style="--radius:9px; padding: 10px 29px; transition-duration: 1.5s;">Configure</a>
-              </li><li class="u-nav-item"><a class="u-active-custom-color-10 u-button-style u-nav-link u-radius u-text-active-black u-text-white" href="secrets" style="--radius:9px; padding: 10px 29px; transition-duration: 1.5s;">Your Secret Keys</a>
-              </li><li class="u-nav-item"><a class="u-active-custom-color-10 u-button-style u-nav-link u-radius u-text-active-black u-text-white" href=" " style="--radius:9px; padding: 10px 29px; transition-duration: 1.5s;">Service Logs</a>
-              </li></ul>
+            <ul class="u-nav u-unstyled"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/dashboard" style="padding-right: 0px;">Dashboard</a>
+            </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/log" style="padding-right: 0px;">Flare Logging</a>
+            </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/secrets" style="padding-right: 0px;">Secret Keys</a>
+            </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/roamingkeys" style="padding-right: 0px;">Roaming License Keys</a>
+            </li></ul>
           </div>
           <div class="u-custom-menu u-nav-container-collapse">
-            <div class="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
+            <div class="custom-expanded u-container-style u-grey-15 u-inner-container-layout u-opacity u-opacity-70 u-sidenav u-sidenav-1" data-offcanvas-width="280">
               <div class="u-inner-container-layout u-sidenav-overflow">
-                <div class="u-menu-close"></div>
-                <ul class="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="dashboard">Dashboard</a>
-                </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="config">Configure</a>
-                </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="secrets">Your Secret Keys</a>
-                </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href=" ">Service Logs</a>
+                <div class="u-menu-close u-menu-close-1"></div>
+                <ul class="u-align-center u-nav u-popupmenu-items u-spacing-0 u-unstyled u-nav-2"><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/dashboard" style="padding-top: 24px; padding-bottom: 24px;">Dashboard</a>
+                </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/log" style="padding-top: 24px; padding-bottom: 24px;">Flare Logging</a>
+                </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/secrets" style="padding-top: 24px; padding-bottom: 24px;">Secret Keys</a>
+                </li><li class="u-nav-item"><a class="u-button-style u-nav-link" href="/roamingkeys" style="padding-top: 24px; padding-bottom: 24px;">Roaming License Keys</a>
                 </li></ul>
               </div>
             </div>
-            <div class="u-black u-menu-overlay u-opacity u-opacity-70"></div>
+            <div class="u-menu-overlay"></div>
           </div>
-        </nav>
-        <img class="u-hover-feature u-image u-image-contain u-image-default u-preserve-proportions u-image-1" src="./images/webdash.png" alt="" data-image-width="1920" data-image-height="408" data-href="https://github.com/t-a-g-o/flare-dashboard" data-target="_blank">
-        <div class="custom-expanded u-border-2 u-border-white u-line u-line-horizontal u-opacity u-opacity-20 u-line-1"></div>
+        </nav><span class="u-file-icon u-hidden-xs u-icon u-text-white u-icon-1" data-href="https://github.com/tagoworks/flare/wiki/Flare-Dashboard" data-target="_blank" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="500"><img src="./images/wiki.png" alt=""></span><span class="u-file-icon u-hidden-xs u-icon u-text-white u-icon-2" data-href="https://github.com/tagoworks/flare/issues" data-target="_blank" data-animation-name="fadeIn" data-animation-duration="1000" data-animation-delay="1000"><img src="./images/issues.png" alt=""></span><span class="u-file-icon u-hover-feature u-icon u-text-white u-icon-3" data-href="/logout" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="0"><img src="./images/exit.png" alt=""></span>
       </div></header>
-    <section class="u-clearfix u-custom-color-4 u-section-1" id="sec-1dad">
+    <section class="u-clearfix u-custom-color-2 u-section-1" id="sec-8654">
       <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-container-style u-gradient u-group u-hover-feature u-radius u-shape-round u-group-1" data-animation-name="customAnimationIn" data-animation-duration="1000" data-animation-delay="0">
-          <div class="u-container-layout u-valign-top u-container-layout-1">
-            <p class="u-text u-text-default u-text-1">{{ logging }}</p>
+        <div class="custom-expanded u-custom-color-1 u-shape u-shape-rectangle u-shape-1"></div>
+        <div class="custom-expanded u-container-style u-custom-color-1 u-group u-radius u-shape-round u-group-1">
+          <div class="u-container-layout u-container-layout-1">
+            <p class="u-custom-font u-font-titillium-web u-text u-text-default u-text-1">Service Log</p>
+            <div class="u-clearfix u-custom-html u-hidden-sm u-hidden-xs u-custom-html-1">
+              <svg class="container" x="0px" y="0px" viewBox="0 0 50 31.25" height="31.25" width="50" preserveAspectRatio="xMidYMid meet"><path class="track" stroke-width="4" fill="none" pathLength="100" d="M0.625 21.5 h10.25 l3.75 -5.875 l7.375 15 l9.75 -30 l7.375 20.875 v0 h10.25"></path><path class="car" stroke-width="4" fill="none" pathLength="100" d="M0.625 21.5 h10.25 l3.75 -5.875 l7.375 15 l9.75 -30 l7.375 20.875 v0 h10.25"></path></svg>
+              <style> .container {
+    --uib-size: 45px;
+    --uib-color: white;
+    --uib-speed: 100000000s;
+    --uib-bg-opacity: .1;
+    height: 31.25px;
+    width: 50px;
+    transform-origin: center;
+    overflow: visible;
+  }
+  .car {
+    stroke: var(--uib-color);
+    stroke-dasharray: 100;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    animation:
+      travel var(--uib-speed) ease-in-out infinite,
+      fade var(--uib-speed) ease-out infinite;
+    will-change: stroke-dasharray, stroke-dashoffset;
+    transition: stroke 0.5s ease;
+  }
+  .track {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: var(--uib-color);
+    opacity: var(--uib-bg-opacity);
+  }
+  @keyframes travel {
+    0% {
+      stroke-dashoffset: 100;
+    }
+    75% {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    20%,
+    55% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  } </style>
+            </div>
+            <div class="u-container-style u-custom-color-4 u-group u-hover-feature u-radius u-shape-round u-group-2">
+              <div class="u-container-layout u-container-layout-2">
+                <p class="u-custom-font u-font-lato u-text u-text-2">Flare Log File<br>
+                  <span style="font-size: 1rem;" class="u-text-grey-40">Located at: {{ directlogdir }}</span>
+                </p>
+                <a href="/resetlogs" class="u-active-none u-border-0 u-btn u-button-style u-none u-btn-1" title="Reset the log file located below. Refresh page to update"><span class="u-file-icon u-icon u-text-white u-icon-1"><img src="./images/log/reset.png" alt=""></span>&nbsp;&nbsp;
+                </a>
+                <h1 class="u-text u-text-3">{{ logging }}</h1>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      
     </section>
-    <footer class="u-align-center u-clearfix u-custom-color-4 u-footer u-footer" id="sec-1ebe"><div class="u-clearfix u-sheet u-sheet-1">
-        <p class="u-align-center u-text u-text-default u-text-1">Flare Dashboard @ {{ localip }}<br>made with&nbsp; &nbsp; &nbsp; by tago
-        </p><span class="u-file-icon u-icon u-text-white u-icon-1"><img src="././images/heart.png" alt=""></span>
+    
+    
+    
+    <footer class="u-align-center u-clearfix u-custom-color-3 u-footer u-footer" id="sec-893c"><div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+        <p class="u-small-text u-text u-text-variant u-text-1">Flare Dashboard @ {{ localip }}<br>made with&nbsp;<span class="u-file-icon u-icon u-text-white u-icon-1"><img src="./images/heart.png" alt=""></span>&nbsp;by tago
+        </p>
       </div>
     </footer>
-</body></html>
+  <script>
+      // Get a reference to the log element and the infinite div
+      const logElement = document.querySelector('.u-text-3');
+      const infiniteDiv = document.querySelector('.u-hidden-sm');
+
+      // Function to set the uib-speed CSS variable
+      function setUibSpeed(speed) {
+        const containerElement = document.querySelector('.container');
+        containerElement.style.setProperty('--uib-speed', speed);
+      }
+
+      // Function to fetch the log from the API
+      function fetchLog() {
+        fetch('/update?type=log')
+          .then(response => response.json())
+          .then(data => {
+            // Update the log element with the new message
+            logElement.textContent = data.log;
+
+            // Check if the log message indicates no log file found
+            if (data.log === "No log file found") {
+              // Set uib-speed to 10000s (effectively slowing down the animation)
+              setUibSpeed('100000000s');
+            } else {
+              // Set uib-speed to 1.25s (default speed) for other cases
+              setUibSpeed('1.25s');
+              // Add the "infinite" class to the div
+              infiniteDiv.classList.add('infinite');
+            }
+          })
+          .catch(error => {
+            console.error('Error fetching log:', error);
+            // Set uib-speed to 100000s (effectively stopping the animation) on failed request
+            setUibSpeed('100000000s');
+            // Remove the "infinite" class from the div
+            infiniteDiv.classList.remove('infinite');
+          });
+      }
+
+      // Call the fetchLog function every second
+      setInterval(fetchLog, 1000);
+  </script>
+  </body>
+</html>
