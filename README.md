@@ -13,10 +13,6 @@
 
 > This Web dashboard makes it eaiser to configure [Flare](https://github.com/tagoworks/flare), and look at different statistic and data about Flare.
 
-<br />
-<div align="center">
-<img width="498.6" height="271.2" src="https://cdn.tago.works/apps/flare/img/showcase.png">
-</div>
 
 # Getting Started
 ### Clone and setup the web files
@@ -50,10 +46,8 @@
    ```shell
    sudo python3 app.py
    ```
-# More information
+
 **By default, the dashboard will be hosted on port 2 and the login will be admin:admin**
-**To lock the dashboard, add "/logout" at the end of the server address** *Ex: http :// 10.0.0.1/logout*
-I will be working on this webapp more and more to make it way nicer and include a lot more functions, I just wanted to do this to see if it was possible with the knowledge I have.
 
 # License
 This project is published under the [MIT license](./LICENSE)
